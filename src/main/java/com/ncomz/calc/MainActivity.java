@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tvxHistory = (TextView) findViewById(R.id.txv_history);
         tvxCalculate.setMovementMethod(ScrollingMovementMethod.getInstance());
         tvxHistory.setMovementMethod(ScrollingMovementMethod.getInstance());
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -147,7 +148,6 @@ public class MainActivity extends AppCompatActivity {
             return mResult.toString();
         } catch (ArithmeticException e) {
             Toast.makeText(getApplicationContext(), "계산할 수 없는 식입니다", Toast.LENGTH_LONG).show();
-            ;
             Log.d("ArithmeticException", "ArithmeticException");
             mOperator = "";
             mOperand = "";
